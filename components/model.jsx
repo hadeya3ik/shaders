@@ -40,8 +40,8 @@ function Model({ mouse , TextCol}) {
   useEffect(() => {console.log(viewport)}, [viewport])
 
   return (
-     <group scale={Math.max(0.9, viewport.width / 19)}> 
-      <Text position={[0, 0, 1.25]} color={TextCol} font="fonts/PPNeueMontreal-Book.otf" >
+     <group scale={Math.max(0.9, viewport.width / 21)}> 
+      <Text scale={.6} position={[0, 0, 1.25]} color={TextCol} font="fonts/PPNeueMontreal-Book.otf" >
         Hadeya Ikram
       </Text>
       <mesh ref={mesh} geometry={nodes.Icosphere.geometry} position={[0, 0, 1.25]}>
