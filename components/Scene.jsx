@@ -27,7 +27,7 @@ function Scene({BgCol, TextCol}) {
   }, [])
 
   return (
-    <Canvas style={{ width: '100%', height: '350px' }}>
+    <Canvas style={{ width: '100%', height: '350px' }} className="transition-colors duration-500">
       <color attach="background" args={[ `${BgCol}` ]} />
         <ambientLight intensity={0.5} />
         <directionalLight intensity={3} position={[0,3,2]}/>

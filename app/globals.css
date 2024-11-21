@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.dark {
+    --primary: #0D0D0D;
+    --primary-foreground: #fffef4;
+}
+
+
+.light {
+    --primary: #dfdfdf;
+    --primary-foreground: #000000;
+}
+
+.blue {
+    --primary: #5a7eff;
+    --primary-foreground: #f1f1f1;
+}
+
+.red {
+    --primary: #1e0a7e;
+    --primary-foreground: #b7c8ca;
+}
+
