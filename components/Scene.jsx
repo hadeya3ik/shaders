@@ -1,12 +1,12 @@
 'use client'
 import React, {useEffect} from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import { Environment, Text } from '@react-three/drei';
 import Model from "./model"
 import {useMotionValue} from 'framer-motion'
 
 function Scene() {
-
+  
   const mouse = {
     x : useMotionValue(0), 
     y : useMotionValue(0)
@@ -27,10 +27,7 @@ function Scene() {
   }, [])
 
   return (
-    <Canvas>
-      <Text fontSize={0.35} position={[0, 0, 1.25]} color="White">
-        Hadeya Ikram
-      </Text>
+    <Canvas className="border-4" style={{ width: '100%', height: '350px' }}>
       <color attach="background" args={["Black"]} />
         <ambientLight intensity={0.5} />
         <directionalLight intensity={3} position={[0,3,2]}/>
