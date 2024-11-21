@@ -2,10 +2,8 @@ import { useGLTF, MeshTransmissionMaterial, Text, DragControls, OrbitControls } 
 import { useThree, useFrame } from '@react-three/fiber';
 import React, { useRef, useEffect } from 'react'
 import { useControls } from 'leva';
-import { useTransform } from 'framer-motion';
-import {useMotionValue} from 'framer-motion'
 
-function Model({ mouse }) {
+function Model({ mouse , TextCol}) {
   const mesh = useRef();
   const { nodes } = useGLTF("/medias/bubble.glb");
   const { viewport } = useThree();
@@ -42,11 +40,8 @@ function Model({ mouse }) {
   useEffect(() => {console.log(viewport)}, [viewport])
 
   return (
-    // <group scale={ viewport.width / 10}>
-    //  <group scale={viewport.width > 22  ? viewport.width / 19 : viewport.width / 11}> 
-     <group scale={Math.max(0.9, viewport.width / 20)}> 
-    {/* <group scale={viewport.width / 10}> */}
-      <Text position={[0, 0, 1.25]} color="White" font="fonts/PPNeueMontreal-Book.otf" >
+     <group scale={Math.max(0.9, viewport.width / 19)}> 
+      <Text position={[0, 0, 1.25]} color={TextCol} font="fonts/PPNeueMontreal-Book.otf" >
         Hadeya Ikram
       </Text>
       <mesh ref={mesh} geometry={nodes.Icosphere.geometry} position={[0, 0, 1.25]}>

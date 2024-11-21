@@ -8,8 +8,8 @@ const Scene = dynamic(() => import("@/components/Scene"), {
 export default function Home() {
   return (
     <main className="">
-      <div className='relative border-4 p-0 m-0]'>
-        <Scene/>
+      <div className='relative'>
+        <Scene BgCol="#ff0EEE" TextCol = "#000000"/>
       </div>
       
       <div>hell</div>
