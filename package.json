@@ -13,8 +13,10 @@
     "@react-three/fiber": "^8.16.8",
     "@types/three": "^0.165.0",
     "framer-motion": "^11.11.17",
+    "glslify-loader": "^2.0.0",
     "leva": "^0.9.35",
     "next": "14.2.4",
+    "raw-loader": "^4.0.2",
     "react": "^18",
     "react-dom": "^18",
     "three": "^0.165.0"
